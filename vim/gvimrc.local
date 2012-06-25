@@ -1,0 +1,12 @@
+" Cancel the current search hightlight
+nnoremap <esc> :noh<return><esc>
+
+if has("gui_macvim")
+  set guifont=Mensch:h12
+  " Remove keystroke for launching conqueterm
+  unmap <D-e>
+else
+  " Remove keystroke for launching conqueterm
+  unmap <C-e>
+endif
+
