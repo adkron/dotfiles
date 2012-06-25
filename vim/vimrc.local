@@ -1,0 +1,66 @@
+" Word wrap without explicit line breaks (unless you press Enter)
+set wrap
+set linebreak
+set nolist  " list disables linebreak
+set textwidth=0
+set wrapmargin=0
+set formatoptions+=l
+" Movement up and down when lines are wrapped
+imap <silent> <Down> <C-o>gj
+imap <silent> <Up> <C-o>gk
+nmap <silent> <Down> gj
+nmap <silent> <Up> gk
+
+
+map <Leader>nf :NERDTreeFind<CR>
+
+inoremap <M-o>       <Esc>o
+inoremap <C-j>       <Down>
+let g:ragtag_global_maps = 1
+
+let g:SuperTabDefaultCompletionType = "context"
+
+let g:speckyQuoteSwitcherKey = "<C-S>'"
+let g:speckySpecSwitcherKey  = "<C-S>x"
+let g:speckyRunSpecKey       = "<C-S>s"
+let g:speckyWindowType       = 2
+
+" For the ruby blocks & refactoring plugins
+runtime macros/matchit.vim
+
+let g:user_zen_expandabbr_key = '<c-z>'
+
+syntax enable
+set background=dark
+colorscheme vividchalk
+
+" Strip trailing whitespace
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+" Write all files when focus lost (like TextMate does it)
+au FocusLost *  :silent wa
+
+" Mapping for toggling between block wrappers
+let g:blockle_mapping = '<Leader>bl'
+
+" Toggle open the tags list window
+nnoremap <silent> <F8> :TlistToggle<CR>
+
+" Map .. to move up the tree when browsing into Git trees
+autocmd User fugitive if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' | nnoremap <buffer> .. :edit %:h<CR> | endif
+
+" delete the fugitive buffer when you leave it
+autocmd BufReadPost fugitive://* set bufhidden=delete
+
+
