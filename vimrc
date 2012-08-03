@@ -1,147 +1,93 @@
-" Include user's local pre .vimrc config
-if filereadable(expand("~/.vimrc.pre"))
-  source ~/.vimrc.pre
-endif
+set nocompatible               " be iMproved
+filetype off                   " required!
 
-set nocompatible
+source $HOME/.vim/bundle.vim
 
-set number
-set ruler
-syntax on
+let mapleader = ','
+syntax enable
 
-" Set encoding
-set encoding=utf-8
+colorscheme gummybears
+set t_Co=256
+" Set console highlights to be readable with black background
+set bg=dark
 
-" Whitespace stuff
-set nowrap
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-set list listchars=tab:\ \ ,trail:·
+" Make GUI colors light on dark
+hi Normal guibg=black guifg=white
 
-" Searching
-set hlsearch
-set incsearch
+set autoindent          " Copy indent from current line for new line
+set nosmartindent       " 'smartindent' breaks right-shifting of # lines
+
+set history=500         " Remember this many commands
+
+set autoindent          " Copy indent from current line for new line
+set nosmartindent       " 'smartindent' breaks right-shifting of # lines
+
+set history=500         " Remember this many commands
+
+set number              " Display line numbers
+set numberwidth=4       " Minimum number of columns to show for line numbers
+set ruler               " Always show the cursor position
+set showmode            " Always show the mode
+set showcmd             " Display incomplete commands
+set incsearch           " Do incremental searching (as you type)
+set hlsearch            " Highlight the latest search pattern
+set laststatus=2        " Always show a status line
+
+set splitright          " Split new vertical windows right of current window
+set splitbelow          " Split new horizontal windows under the current window
+
+set winminheight=0      " Allow windows to shrink to status line.
+set winminwidth=0       " Allow windows to shrink to vertical separator.
+
+set lbr                 " Wrap line on word boundaries
+set wrap
+
+set expandtab           " Insert spaces for <Tab> press; use spaces to indent.
+set smarttab            " Tab respects 'shiftwidth', 'tabstop', 'softtabstop'.
+set tabstop=2           " Set the visible width of tabs.
+set softtabstop=2       " Edit as if tabs are 4 characters wide.
+set shiftwidth=2        " Number of spaces to use for indent and unindent.
+set shiftround          " Round indent to a multiple of 'shiftwidth'.
+set showcmd             " Letting me know I'm in 'leader' mode
+
+set wildmode=list:longest,full
+set wildmenu
+
+set virtualedit=block
+
+" Care about case only if I use an uppercase letter
 set ignorecase
 set smartcase
 
-" Tab completion
-set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
+" Make buffers less annoying, i.e.,
+" keep changed buffers without requiring saves
+set hidden
 
-" Status bar
-set laststatus=2
+" Act more 'normal' about backpacking
+" e.g. to backspace past start of edit
+set backspace=indent,eol,start
 
-" Without setting this, ZoomWin restores windows in a way that causes
-" equalalways behavior to be triggered the next time CommandT is used.
-" This is likely a bludgeon to solve some other issue, but it works
-set noequalalways
+" Make the keyboard and mouse act more like Windows
+set selection=exclusive
+set selectmode=mouse,key
+set mousemodel=popup
+set keymodel=startsel,stopsel
 
-" Leader configuration
-let mapleader = ","
+set whichwrap+=<,>,[,]
 
-" NERDTree configuration
-let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
-map <Leader>n :NERDTreeToggle<CR>
+set listchars=tab:>-,trail:·
+set list
+
+" Update the swap file every 20 characters. I don't like to lose stuff.
+"
+set updatecount=20
 
 " Command-T configuration
 let g:CommandTMaxHeight=20
 
-" ZoomWin configuration
-map <Leader><Leader> :ZoomWin<CR>
-
-" CTags
-map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
-map <C-\> :tnext<CR>
-
-" Gundo configuration
-nmap <F5> :GundoToggle<CR>
-imap <F5> <ESC>:GundoToggle<CR>
-
-" Remember last location in file
-if has("autocmd")
-  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-    \| exe "normal g'\"" | endif
-endif
-
-" Prefs for Gist plugin
-" Mac-specific: post gist url to clip board
-let g:gist_clip_command = 'pbcopy'
-" Detect filetype if vim fails auto-detection
-let g:gist_detect_filetype = 1
-
-function s:setupWrapping()
-  set wrap
-  set wrapmargin=2
-  set textwidth=72
-endfunction
-
-function s:setupMarkup()
-  call s:setupWrapping()
-  map <buffer> <Leader>p :Hammer<CR>
-endfunction
-
-" Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
-au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
-
-" md, markdown, and mk are markdown and define buffer-local preview
-au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
-
-" add json syntax highlighting
-au BufNewFile,BufRead *.json set ft=javascript
-
-au BufRead,BufNewFile *.txt call s:setupWrapping()
-
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
-
-" load the plugin and indent settings for the detected filetype
-filetype plugin indent on
-
-" Opens an edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>e
-map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
-
-" Opens a tab edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>t
-map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
-
-" Inserts the path of the currently edited file into a command
-" Command mode: Ctrl+P
-cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
-
-" Unimpaired configuration
-" Bubble single lines
-nmap <C-Up> [e
-nmap <C-Down> ]e
-nmap <C-k> [e
-nmap <C-j> ]e
-" Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
-vmap <C-k> [egv
-vmap <C-j> ]egv
-
 " Enable syntastic syntax checking
 let g:syntastic_enable_signs=1
 let g:syntastic_quiet_warnings=1
-
-" gist-vim defaults
-if has("mac")
-  let g:gist_clip_command = 'pbcopy'
-elseif has("unix")
-  let g:gist_clip_command = 'xclip -selection clipboard'
-endif
-let g:gist_detect_filetype = 1
-let g:gist_open_browser_after_post = 1
-
-" Use modeline overrides
-set modeline
-set modelines=10
-
-" Default color scheme
-color vividchalk
 
 " Directories for swp files
 set backupdir=~/.vim/backup
@@ -156,15 +102,9 @@ let macvim_hig_shift_movement = 1
 " % to bounce from do to end etc.
 runtime! macros/matchit.vim
 
-" Show (partial) command in the status line
-set showcmd
-
-if has("gui_running")
-  " Automatically resize splits when resizing MacVim window
-  autocmd VimResized * wincmd =
-endif
-
-" Include user's local vim config
-if filereadable(expand("~/.vimrc.local"))
-  source ~/.vimrc.local
-endif
+" Source other settings from files
+"
+" Key mappings
+source $HOME/.vim/keymaps.vim
+" Commands
+source $HOME/.vim/commands.vim
