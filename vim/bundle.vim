@@ -32,5 +32,6 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'scrooloose/syntastic'
 Bundle 'sjl/gundo.vim'
 Bundle 'jelera/vim-gummybears-colorscheme'
+Bundle 'tpope/vim-vividchalk'
 
 Bundle 'git://git.wincent.com/command-t.git'
