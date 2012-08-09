@@ -112,3 +112,7 @@ source $HOME/.vim/commands.vim
 " Filetype settings - needed when the original plugin filetype settings aren't
 " being honored
 au BufNewFile,BufRead *.feature set filetype=cucumber
+
+" Filetype settings - needed when the original plugin filetype settings aren't
+" being honored
+au BufNewFile,BufRead *.scss set filetype=scss
