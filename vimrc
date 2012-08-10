@@ -102,6 +102,8 @@ runtime! macros/matchit.vim
 source $HOME/.vim/keymaps.vim
 " Commands
 source $HOME/.vim/commands.vim
+" File types
+source $HOME/.vim/filetypes.vim
 
 " Filetype settings - needed when the original plugin filetype settings aren't
 " being honored
