@@ -192,3 +192,8 @@ nnoremap <silent> <F8> :TlistToggle<CR>
  " Start Command-t with leader-t
   map <leader>t :CommandT<CR>
 
+" Map j/k combos to get out of insert mode
+inoremap jk <esc>l
+inoremap kj <esc>l
+inoremap jj <esc>l
+inoremap kk <esc>l
