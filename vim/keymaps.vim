@@ -188,3 +188,7 @@ nnoremap <silent> <F8> :TlistToggle<CR>
   imap <C-S-Right> <Esc> <C-w>l
   map <C-S-Left> <C-w>h
   imap <C-S-Left> <C-w>h
+
+ " Start Command-t with leader-t
+  map <leader>t :CommandT<CR>
+
