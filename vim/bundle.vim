@@ -37,5 +37,6 @@ Bundle 'cperl82/bufexplorer'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'Raimondi/delimitMate'
+Bundle 'jgdavey/vim-blockle'
 
 Bundle 'git://git.wincent.com/command-t.git'
