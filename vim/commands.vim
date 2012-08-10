@@ -92,3 +92,8 @@ au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
 au BufNewFile,BufRead *.json set ft=javascript
 
 au BufRead,BufNewFile *.txt call s:setupWrapping()
+
+cabbrev Q quit
+cabbrev W write
+cabbrev Wq wq
+cabbrev WQ wq
