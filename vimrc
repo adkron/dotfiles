@@ -96,6 +96,14 @@ let macvim_hig_shift_movement = 1
 " % to bounce from do to end etc.
 runtime! macros/matchit.vim
 
+if &term =~ '^screen'
+  " tmux will send xterm-style keys when its xterm-keys option is on
+  execute "set <xUp>=\e[1;*A"
+  execute "set <xDown>=\e[1;*B"
+  execute "set <xRight>=\e[1;*C"
+  execute "set <xLeft>=\e[1;*D"
+endif
+
 " Source other settings from files
 "
 " Key mappings
@@ -104,11 +112,3 @@ source $HOME/.vim/keymaps.vim
 source $HOME/.vim/commands.vim
 " File types
 source $HOME/.vim/filetypes.vim
-
-" Filetype settings - needed when the original plugin filetype settings aren't
-" being honored
-au BufNewFile,BufRead *.feature set filetype=cucumber
-au BufNewFile,BufRead *.scss set filetype=scss
-au BufNewFile,BufRead *.eco set filetype=eco
-au BufNewFile,BufRead *.rabl set filetype=ruby
-au BufNewFile,BufRead *.coffee set filetype=coffee
