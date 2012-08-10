@@ -33,5 +33,6 @@ Bundle 'scrooloose/syntastic'
 Bundle 'sjl/gundo.vim'
 Bundle 'jelera/vim-gummybears-colorscheme'
 Bundle 'tpope/vim-vividchalk'
+Bundle 'cperl82/bufexplorer'
 
 Bundle 'git://git.wincent.com/command-t.git'
