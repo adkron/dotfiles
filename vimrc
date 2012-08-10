@@ -6,7 +6,7 @@ source $HOME/.vim/bundle.vim
 let mapleader = ','
 syntax enable
 
-colorscheme gummybears
+colorscheme vividchalk
 set t_Co=256
 " Set console highlights to be readable with black background
 set bg=dark
