@@ -34,5 +34,8 @@ Bundle 'sjl/gundo.vim'
 Bundle 'jelera/vim-gummybears-colorscheme'
 Bundle 'tpope/vim-vividchalk'
 Bundle 'cperl82/bufexplorer'
+Bundle 'tsaleh/vim-matchit'
+Bundle 'ecomba/vim-ruby-refactoring'
+Bundle 'Raimondi/delimitMate'
 
 Bundle 'git://git.wincent.com/command-t.git'
