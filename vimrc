@@ -34,7 +34,6 @@ set hlsearch            " Highlight the latest search pattern
 set laststatus=2        " Always show a status line
 
 set splitright          " Split new vertical windows right of current window
-set splitbelow          " Split new horizontal windows under the current window
 
 set winminheight=0      " Allow windows to shrink to status line.
 set winminwidth=0       " Allow windows to shrink to vertical separator.
