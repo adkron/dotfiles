@@ -146,11 +146,6 @@ let g:ragtag_global_maps = 1
 
 let g:SuperTabDefaultCompletionType = "context"
 
-let g:speckyQuoteSwitcherKey = "<C-S>'"
-let g:speckySpecSwitcherKey  = "<C-S>x"
-let g:speckyRunSpecKey       = "<C-S>s"
-let g:speckyWindowType       = 2
-
 let g:user_zen_expandabbr_key = '<c-z>'
 
 " Mapping for toggling between block wrappers
