@@ -26,11 +26,6 @@ inoremap <C-S>  <C-O>:update<CR>
 noremap  <C-Z>  u
 inoremap <C-Z>  <C-O>u
 
-" Control+Y is Redo (but not repeat) in Normal and Insert mode.
-"
-noremap  <C-Y>  <C-R>
-inoremap <C-Y>  <C-O><C-R>
-
 " F2 inserts the date and time at the cursor.
 "
 inoremap <F2>   <C-R>=strftime("%c")<CR>
@@ -160,9 +155,6 @@ nnoremap <silent> <F8> :TlistToggle<CR>
 
 " Ctrl-Shift-F for Ack
   map <C-F> :Ack<space>
-
-" Ctrl-e for ConqueTerm
-  map <C-e> :call StartTerm()<CR>
 
 " Alt-/ to toggle comments
   map <A-/> <plug>NERDCommenterToggle<CR>
