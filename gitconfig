@@ -1,0 +1,72 @@
+[git-pair]
+	authors = Amos King <amos.king@asolutions.com>
+	authors = Nick Bimpasis <nick.bimpasis@asolutions.com>
+	authors = Helena Converse <helena.converse@asolutions.com>
+	authors = Lori Cross <lori.cross@asolutions.com>
+	authors = Lauren Buchler <lauren.buchler@asolutions.com>
+	authors = Kevin Compton <kevin.compton@asolutions.com>
+	authors = Charlie Sanders <charlie.sanders@asolutions.com>
+	authors = Victor Prechtel <victor.prechtel@asolutions.com>
+	authors = Mario Aquino <mario.aquino@asolutions.com>
+	authors = Craig Buchek <craig.buchek@asolutions.com>
+	authors = David McCown <dave.mccown@asolutions.com>
+	authors = Matt Korwel <matt.korwel@asolutions.com>
+	authors = Kenny Ortmann <kenny.ortmann@asolutions.com>
+
+[color]
+	ui = auto
+	interactive = auto
+        status = auto
+        commit = auto
+        diff = auto
+        branch = auto
+
+[apply]
+        whitespace = strip
+        whitespace = nowarn
+
+[alias]
+	addall = !git add . && git add -u && git st
+	amend = commit --amend --reset-author --reuse-message=HEAD
+	aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /' | sort
+	br = branch
+	ci = commit -v
+	clear = !git add . && git stash && git stash drop
+	co = checkout
+	cp = cherry-pick
+	di = diff
+	diff-stat = diff -b --stat
+        graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+        hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+        history = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	ignore = !([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	log-graph = log --all --graph --decorate
+	log-refs = log --all --graph --decorate --oneline --simplify-by-decoration --no-merges
+	log-timeline = log --format='%h %an %ar - %s'
+	log-local = log --oneline origin..HEAD
+	log-fetched = log --oneline HEAD..origin/master
+	merged = branch --merged
+        oneline = log --oneline
+        p = pair
+	patch = log -p --no-walk # Generate patch file from a commit.
+	pick = cherry-pick
+	prune = remote prune
+	prune-all = !git remote | xargs -n 1 git remote prune
+	search = log --pretty=short -S
+	st = status
+	staged = diff --staged
+	stat = status
+	svn-pull = !git svn fetch && git svn rebase
+	svn-push = !git svn dcommit
+	uncommit = reset --soft HEAD^
+	unmerge = reset --hard ORIG_HEAD
+	unmerged = branch --no-merged
+	unstage = reset HEAD --
+	wdiff = diff --word-diff-regex=[a-zA-Z_0-9]+
+	which-branches-contain = branch -a --contains
+	which-tags-contain = name-rev --name-only
+	wipe = !git reset --hard; git clean -fd
+
+[http]
+        sslVerify = 0
