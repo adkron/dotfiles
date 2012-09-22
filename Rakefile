@@ -71,6 +71,7 @@ end
 
 namespace "vundle" do
   task :install do
+    puts 'Updating vim bundles with vundle. This may take a few minutes...'
     `vim -u vim.symlink/bundle.vim +BundleInstall +qall`
   end
 end
