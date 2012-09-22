@@ -3,7 +3,7 @@ require 'rake'
 
 task :default => [:install]
 
-task :install => [:git_submodules_init, :symlinks] do
+task :install => [:git_submodules_init, :symlinks, 'vundle:install'] do
   puts 'Install complete!'
 end
 
@@ -69,4 +69,8 @@ task :uninstall do
   end
 end
 
-
+namespace "vundle" do
+  task :install do
+    `vim -u vim.symlink/bundle.vim +BundleInstall +qall`
+  end
+end
