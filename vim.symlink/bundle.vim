@@ -1,3 +1,6 @@
+set nocompatible               " be iMproved
+filetype off                   " required!
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -40,3 +43,5 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'jgdavey/vim-blockle'
 
 Bundle 'git://git.wincent.com/command-t.git'
+
+filetype plugin indent on     " required!
