@@ -1,7 +1,7 @@
-vim/backup/
-vim/doc/
-vim/indent/
-vim/nerdtree_plugin/
-vim/plugin/
-vim/syntax/
+vim.symlink/backup/
+vim.symlink/doc/
+vim.symlink/indent/
+vim.symlink/nerdtree_plugin/
+vim.symlink/plugin/
+vim.symlink/syntax/
 .netrwhist
