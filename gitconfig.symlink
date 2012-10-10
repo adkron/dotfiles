@@ -70,3 +70,6 @@
 
 [http]
     sslVerify = 0
+
+[include]
+    path = .my_gitconfig
