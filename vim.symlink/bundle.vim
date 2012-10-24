@@ -44,4 +44,8 @@ Bundle 'jgdavey/vim-blockle'
 
 Bundle 'git://git.wincent.com/command-t.git'
 
+Bundle 'python.vim'
+Bundle 'indent/python.vim'
+Bundle 'pydoc.vim'
+
 filetype plugin indent on     " required!
