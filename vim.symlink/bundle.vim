@@ -42,7 +42,7 @@ Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'Raimondi/delimitMate'
 Bundle 'jgdavey/vim-blockle'
 
-Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'kien/ctrlp.vim'
 
 Bundle 'python.vim'
 Bundle 'indent/python.vim'
