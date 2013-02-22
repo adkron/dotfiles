@@ -55,7 +55,7 @@ set smartcase
 
 " Make buffers less annoying, i.e.,
 " keep changed buffers without requiring saves
-set hidden
+" set hidden
 
 " Act more 'normal' about backpacking
 " e.g. to backspace past start of edit
