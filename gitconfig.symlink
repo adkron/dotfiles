@@ -73,3 +73,8 @@
 
 [include]
     path = .my_gitconfig
+[user]
+	name = Amos L King
+	email = amos@theablefew.com
+[core]
+	editor = /usr/bin/vim
