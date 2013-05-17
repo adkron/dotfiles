@@ -13,6 +13,7 @@ filetype plugin indent on     " required!
  "
  " original repos on github
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-bundler'
 Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-rails.git'
@@ -43,9 +44,5 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'jgdavey/vim-blockle'
 
 Bundle 'kien/ctrlp.vim'
-
-Bundle 'python.vim'
-Bundle 'indent/python.vim'
-Bundle 'pydoc.vim'
 
 filetype plugin indent on     " required!
