@@ -149,10 +149,6 @@ let g:blockle_mapping = '<Leader>bl'
 " Toggle open the tags list window
 nnoremap <silent> <F8> :TlistToggle<CR>
 
-" Ctrl-T for Command-T
-  map <C-t> :CommandT<CR>
-  imap <C-t> <Esc>:CommandT<CR>
-
 " Ctrl-Shift-F for Ack
   map <C-F> :Ack<space>
 
@@ -175,9 +171,6 @@ nnoremap <silent> <F8> :TlistToggle<CR>
   imap <C-S-Right> <Esc> <C-w>l
   map <C-S-Left> <C-w>h
   imap <C-S-Left> <C-w>h
-
- " Start Command-t with leader-t
-  map <leader>t :CommandT<CR>
 
 " Map j/k combos to get out of insert mode
 inoremap jk <esc>l
