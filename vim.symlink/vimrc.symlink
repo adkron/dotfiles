@@ -1,3 +1,9 @@
+aug AutoloadVimrc
+  au!
+  au BufWritePost ~/dotfiles/vim.symlink/vimrc.symlink source $MYVIMRC
+  au BufWritePost ~/dotfiles/vim.symlink/*.vim source $MYVIMRC
+aug END
+
 set nocompatible               " be iMproved
 filetype off                   " required!
 
