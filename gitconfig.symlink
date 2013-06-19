@@ -1,17 +1,5 @@
 [git-pair]
     authors = Amos King <amos.king@asolutions.com>
-    authors = Nick Bimpasis <nick.bimpasis@asolutions.com>
-    authors = Helena Converse <helena.converse@asolutions.com>
-    authors = Lori Cross <lori.cross@asolutions.com>
-    authors = Lauren Buchler <lauren.buchler@asolutions.com>
-    authors = Kevin Compton <kevin.compton@asolutions.com>
-    authors = Charlie Sanders <charlie.sanders@asolutions.com>
-    authors = Victor Prechtel <victor.prechtel@asolutions.com>
-    authors = Mario Aquino <mario.aquino@asolutions.com>
-    authors = Craig Buchek <craig.buchek@asolutions.com>
-    authors = David McCown <dave.mccown@asolutions.com>
-    authors = Matt Korwel <matt.korwel@asolutions.com>
-    authors = Kenny Ortmann <kenny.ortmann@asolutions.com>
 
 [color]
     ui = auto
@@ -75,6 +63,6 @@
     path = .my_gitconfig
 [user]
 	name = Amos L King
-	email = amos@theablefew.com
+	email = amos.l.king@gmail.com
 [core]
 	editor = /usr/bin/vim
