@@ -118,3 +118,5 @@ source $HOME/.vim/keymaps.vim
 source $HOME/.vim/commands.vim
 " File types
 source $HOME/.vim/filetypes.vim
+" Abbreviations
+source $HOME/.vim/abbreviations.vim
