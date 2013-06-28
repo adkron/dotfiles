@@ -42,6 +42,7 @@ Bundle 'tsaleh/vim-matchit'
 Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'Raimondi/delimitMate'
 Bundle 'jgdavey/vim-blockle'
+Bundle 'airblade/vim-gitgutter'
 
 Bundle 'kien/ctrlp.vim'
 

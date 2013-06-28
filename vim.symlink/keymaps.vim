@@ -177,3 +177,8 @@ inoremap jk <esc>l
 inoremap kj <esc>l
 inoremap jj <esc>l
 inoremap kk <esc>l
+
+" Git Gutter Commands
+let g:gitgutter_highlight_lines = 1
+let g:gitgutter_enabled = 0
+nmap <leader>gg :GitGutterToggle<CR>
