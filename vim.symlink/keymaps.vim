@@ -182,3 +182,6 @@ inoremap kk <esc>l
 let g:gitgutter_highlight_lines = 1
 let g:gitgutter_enabled = 0
 nmap <leader>gg :GitGutterToggle<CR>
+
+" Fugitive
+nmap <leader>gs :Gstatus<CR>
