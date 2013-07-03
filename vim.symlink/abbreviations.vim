@@ -1,5 +1,4 @@
-:ab gsign Amos King @adkron <amos.l.king@gmail.com>
-:ab gsing Amos King @adkron <amos.l.king@gmail.com>
+:ab ak Amos King @adkron <amos.l.king@gmail.com>
 :ab d def
 :ab cl class
 :ab St Struct.new
