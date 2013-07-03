@@ -186,3 +186,4 @@ nmap <leader>gg :GitGutterToggle<CR>
 " Fugitive
 nmap <leader>gs :Gstatus<CR>
 nmap <leader>gr :Gread<CR>:w<CR>
+nmap <leader>gp :Git push origin HEAD<CR>
