@@ -187,3 +187,7 @@ nmap <leader>gg :GitGutterToggle<CR>
 nmap <leader>gs :Gstatus<CR>
 nmap <leader>gr :Gread<CR>:w<CR>
 nmap <leader>gp :Git push origin HEAD<CR>
+
+" Ruby helpers
+nmap <leader>rs :w<CR>:! rspec %<CR>
+nmap <leader>r :w<CR>:! ruby %<CR>
