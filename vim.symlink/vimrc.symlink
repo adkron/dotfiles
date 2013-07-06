@@ -25,7 +25,7 @@ set nosmartindent       " 'smartindent' breaks right-shifting of # lines
 
 set history=10000       " Remember this many commands
 
-set number              " Display line numbers
+set relativenumber              " Display line numbers
 set numberwidth=4       " Minimum number of columns to show for line numbers
 set ruler               " Always show the cursor position
 set showmode            " Always show the mode
