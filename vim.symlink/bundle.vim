@@ -43,6 +43,7 @@ Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'Raimondi/delimitMate'
 Bundle 'jgdavey/vim-blockle'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'vim-indent-object'
 
 Bundle 'kien/ctrlp.vim'
 
