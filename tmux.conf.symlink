@@ -1,6 +1,3 @@
-bind M-k send-keys -R; clear-history
-
-
 # shut off mouse
 setw -g mode-mouse off
 
