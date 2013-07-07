@@ -192,4 +192,9 @@ nmap <leader>gp :Git push origin HEAD<CR>
 nmap <leader>rs :w<CR>:! rspec %<CR>
 nmap <leader>r :w<CR>:! ruby %<CR>
 
+" spell check
 nmap <leader>sc :setlocal spell! spelllang=en_us<CR>
+
+" quick save
+nmap <leader>s <ESC>:w<CR>
+inoremap <leader>s <ESC>:w<CR>
