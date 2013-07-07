@@ -191,3 +191,5 @@ nmap <leader>gp :Git push origin HEAD<CR>
 " Ruby helpers
 nmap <leader>rs :w<CR>:! rspec %<CR>
 nmap <leader>r :w<CR>:! ruby %<CR>
+
+nmap <leader>sc :setlocal spell! spelllang=en_us<CR>
