@@ -198,3 +198,7 @@ nmap <leader>sc :setlocal spell! spelllang=en_us<CR>
 " quick save
 nmap <leader>s <ESC>:w<CR>
 inoremap <leader>s <ESC>:w<CR>
+
+" edit vim configs
+nmap <leader>ab :vsp<CR>:e ~/dotfiles/vim.symlink/abbreviations.vim<CR>
+nmap <leader>km :vsp<CR>:e ~/dotfiles/vim.symlink/keymaps.vim<CR>
