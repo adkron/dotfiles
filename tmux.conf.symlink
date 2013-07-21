@@ -30,12 +30,6 @@ set-option -g status-left "#[fg=black]#H #[fg=black]session:window.pane #[fg=bla
 set-option -g status-right-length 45
 set-option -g status-right "%I:%M %p #[fg=yellow]#[fg=green]#(uptime | cut -d ',' -f 4-)"
 
-# Maximize window
-unbind UP
-bind UP new-window -d -n tmux-zoom \; swap-pane -s tmux-zoom.1 \; select-window -t tmux-zoom
-unbind DOWN
-bind DOWN last-window \; swap-pane -s tmux-zoom.1 \; kill-window -t tmux-zoom
-
 # vim movement
 unbind LEFT
 unbind RIGHT
