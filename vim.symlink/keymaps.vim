@@ -200,5 +200,6 @@ nmap <leader>s <ESC>:w<CR>
 inoremap <leader>s <ESC>:w<CR>
 
 " edit vim configs
+nmap <leader><leader>c :vsp<CR>:e ~/dotfiles/vim.symlink/vimrc.symlink<CR>
 nmap <leader>ab :vsp<CR>:e ~/dotfiles/vim.symlink/abbreviations.vim<CR>
 nmap <leader>km :vsp<CR>:e ~/dotfiles/vim.symlink/keymaps.vim<CR>
