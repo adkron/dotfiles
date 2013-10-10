@@ -197,7 +197,7 @@ nmap <leader><leader>r :w<CR>:! ruby -Itest %<CR>
 nmap <leader>sc :setlocal spell! spelllang=en_us<CR>
 
 " quick save
-nmap <leader>s <ESC>:w<CR>
+nmap <leader>s :w<CR>
 inoremap <leader>s <ESC>:w<CR>
 
 " edit vim configs
