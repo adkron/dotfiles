@@ -194,7 +194,8 @@ nmap <leader>sc :setlocal spell! spelllang=en_us<CR>
 
 " quick save
 nmap <leader>s :w<CR>
-inoremap <leader>s <ESC>:w<CR>
+inoremap <leader>s <ESC>:w<CR>i
+
 
 " edit vim configs
 nmap <leader><leader>c :vsp<CR>:e ~/dotfiles/vim.symlink/vimrc.symlink<CR>
