@@ -106,15 +106,11 @@ map <leader>n :NERDTreeToggle<CR>
 
 " Unimpaired configuration
 " Bubble single lines
-nmap <C-Up> [e
-nmap <C-Down> ]e
-nmap <C-k> [e
-nmap <C-j> ]e
+nmap <C-k> [e==
+nmap <C-j> ]e==
 " Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
-vmap <C-k> [egv
-vmap <C-j> ]egv
+vmap <C-k> [egv==
+vmap <C-j> ]egv==
 
 " Movement up and down when lines are wrapped
 imap <silent> <Down> <C-o>gj
