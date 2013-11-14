@@ -186,7 +186,7 @@ nmap <leader>gp :Git push origin HEAD<CR>
 
 " Ruby helpers
 nmap <leader>rs :w<CR>:! rspec %<CR>
-nmap <leader>r :w<CR>:! ruby %<CR>
+nmap <leader>r :w<CR>:! bundle exec ruby %<CR>
 nmap <leader><leader>r :w<CR>:! ruby -Itest %<CR>
 
 " spell check
@@ -202,4 +202,4 @@ nmap <leader>ab :vsp<CR>:e ~/dotfiles/vim.symlink/abbreviations.vim<CR>
 nmap <leader>km :vsp<CR>:e ~/dotfiles/vim.symlink/keymaps.vim<CR>
 nmap <leader>ts :vsp<CR>:e ~/toolsharp.txt<CR>
 imap <leader>g :!gist %<CR>
-nmap <leader>gp :!gist --private %<CR>
+nmap <leader>pg :!gist --private %<CR>
