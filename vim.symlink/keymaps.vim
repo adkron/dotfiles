@@ -200,3 +200,6 @@ inoremap <leader>s <ESC>:w<CR>
 nmap <leader><leader>c :vsp<CR>:e ~/dotfiles/vim.symlink/vimrc.symlink<CR>
 nmap <leader>ab :vsp<CR>:e ~/dotfiles/vim.symlink/abbreviations.vim<CR>
 nmap <leader>km :vsp<CR>:e ~/dotfiles/vim.symlink/keymaps.vim<CR>
+nmap <leader>ts :vsp<CR>:e ~/toolsharp.txt<CR>
+imap <leader>g :!gist %<CR>
+nmap <leader>gp :!gist --private %<CR>
