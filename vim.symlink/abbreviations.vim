@@ -4,3 +4,4 @@
 :ab ddate <c-r>=strftime("%F")<CR>
 :ab rbd require "debugger"; debugger
 :ab rdb require "debugger"; debugger
+:ab poeple people
