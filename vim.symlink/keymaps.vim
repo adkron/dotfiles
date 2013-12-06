@@ -185,9 +185,9 @@ nmap <leader>gr :Gread<CR>:w<CR>
 nmap <leader>gp :Git push origin HEAD<CR>
 
 " Ruby helpers
-nmap <leader>rs :w<CR>:! rspec %<CR>
-nmap <leader>r :w<CR>:! bundle exec ruby %<CR>
-nmap <leader><leader>r :w<CR>:! ruby -Itest %<CR>
+nmap <leader>rs :w<CR>:! recho "Preparing" && spec %<CR>
+nmap <leader>r :w<CR>:! echo "Preparing" && bundle exec ruby %<CR>
+nmap <leader><leader>r :w<CR>:! echo "Preparing" && ruby -Itest %<CR>
 
 " spell check
 nmap <leader>sc :setlocal spell! spelllang=en_us<CR>
