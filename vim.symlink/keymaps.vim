@@ -185,7 +185,7 @@ nmap <leader>gr :Gread<CR>:w<CR>
 nmap <leader>gp :Git push origin HEAD<CR>
 
 " Ruby helpers
-nmap <leader>rs :w<CR>:! recho "Preparing" && spec %<CR>
+nmap <leader>rs :w<CR>:! echo "Preparing" && rspec %<CR>
 nmap <leader>r :w<CR>:! echo "Preparing" && bundle exec ruby %<CR>
 nmap <leader><leader>r :w<CR>:! echo "Preparing" && ruby -Itest %<CR>
 
