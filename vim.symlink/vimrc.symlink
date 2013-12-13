@@ -6,6 +6,7 @@ aug END
 
 set nocompatible               " be iMproved
 filetype off                   " required!
+set shell=$SHELL
 
 source $HOME/.vim/bundle.vim
 
