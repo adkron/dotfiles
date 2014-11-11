@@ -43,7 +43,7 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'jgdavey/vim-blockle'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'vim-indent-object'
-
+Bundle 'kien/raindow_parentheses.vim'
 Bundle 'kien/ctrlp.vim'
 
 filetype plugin indent on     " required!

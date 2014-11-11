@@ -143,7 +143,7 @@ let g:blockle_mapping = '<Leader>bl'
 nnoremap <silent> <F8> :TlistToggle<CR>
 
 " Ctrl-Shift-F for Ack
-  map <C-F> :Ack<space>
+  map <C-F> :Ack!<space>""<Left>
 
 " Alt-/ to toggle comments
   map <A-/> <plug>NERDCommenterToggle<CR>
@@ -165,12 +165,6 @@ nnoremap <silent> <F8> :TlistToggle<CR>
   map <C-S-Left> <C-w>h
   imap <C-S-Left> <C-w>h
 
-" Map j/k combos to get out of insert mode
-inoremap jk <esc>l
-inoremap kj <esc>l
-inoremap jj <esc>l
-inoremap kk <esc>l
-
 " Git Gutter Commands
 let g:gitgutter_highlight_lines = 1
 let g:gitgutter_enabled = 0
@@ -183,7 +177,8 @@ nmap <leader>gp :Git push origin HEAD<CR>
 
 " Ruby helpers
 nmap <leader>rs :w<CR>:! echo "Preparing" && rspec %<CR>
-nmap <leader>r :w<CR>:! echo "Preparing" && bundle exec ruby %<CR>
+nmap <leader>rd :w<CR>:! echo "Preparing" && rspec --format documentation %<CR>
+nmap <leader>r :w<CR>:! echo "Preparing" && ruby %<CR>
 nmap <leader><leader>r :wa<CR>:! echo "Preparing" && bundle exec ruby -Itest %<CR>
 vmap <leader>gb :Gbrowse<CR>
 inoremap <leader>gb <ESC>:Gbrowse<CR>
@@ -200,5 +195,8 @@ nmap <leader><leader>c :vsp<CR>:e ~/dotfiles/vim.symlink/vimrc.symlink<CR>
 nmap <leader>ab :vsp<CR>:e ~/dotfiles/vim.symlink/abbreviations.vim<CR>
 nmap <leader>km :vsp<CR>:e ~/dotfiles/vim.symlink/keymaps.vim<CR>
 nmap <leader>ts :vsp<CR>:e ~/toolsharp.txt<CR>
-imap <leader>g :!gist %<CR>
+nmap <leader>g :!gist %<CR>
 nmap <leader>pg :!gist --private %<CR>
+
+" view output
+nmap <leader>vo <ESC>:!<CR>

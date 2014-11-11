@@ -6,3 +6,5 @@ alias pgrep='ps aux | grep'
 alias tn="tmux -2 new-session -s"
 alias tt="tmux -2 attach -t"
 alias tl="tmux ls"
+alias .="cd ."
+alias ..="cd .."
