@@ -18,6 +18,7 @@ au BufNewFile,BufRead *.eco set filetype=eco
 au BufNewFile,BufRead *.rabl set filetype=ruby
 au BufNewFile,BufRead *.coffee set filetype=coffee
 au BufNewFile,BufRead *.ru set filetype=ruby
+au BufNewFile,BufRead *.exs set filetype=elixir
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
