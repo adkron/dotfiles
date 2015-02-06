@@ -23,11 +23,12 @@ syntax enable
 
 colorscheme vividchalk
 set t_Co=256
+
 " Set console highlights to be readable with black background
 set bg=dark
 
 " Make GUI colors light on dark
-hi Normal guibg=black guifg=white
+hi Normal guibg=black guifg=white ctermbg=black ctermfg=white
 
 set autoindent          " Copy indent from current line for new line
 set nosmartindent       " 'smartindent' breaks right-shifting of # lines
