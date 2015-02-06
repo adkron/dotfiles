@@ -94,7 +94,3 @@ bind p paste-buffer
 # put next and previous to [ and ]
 bind -r [ previous-window
 bind -r ] next-window
-
-# Fix to allow pbcopy/pbpaste and launchctl.
-set -g default-command "reattach-to-user-namespace -l bash"
-
