@@ -12,6 +12,7 @@ filetype plugin indent on     " required!
  " My Bundles here:
  "
  " original repos on github
+Bundle 'elixir-lang/vim-elixir'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-bundler'
 Bundle 'mileszs/ack.vim'
