@@ -174,14 +174,19 @@ nmap <leader>gg :GitGutterToggle<CR>
 nmap <leader>gs :Gstatus<CR>
 nmap <leader>gr :Gread<CR>:w<CR>
 nmap <leader>gp :Git push origin HEAD<CR>
+nmap <leader>gh :Gblame<CR>
+nmap <leader>grh :Git reset --hard<CR>
+nmap <leader>gsd :Git svn dcommit<CR>
+nmap <leader>gsf :Git svn fetch<CR>
+nmap <leader>gsr :Git svn rebase<CR>
+vmap <leader>gb :Gbrowse<CR>
+inoremap <leader>gb <ESC>:Gbrowse<CR>
 
 " Ruby helpers
 nmap <leader>rs :w<CR>:! echo "Preparing" && rspec %<CR>
 nmap <leader>rd :w<CR>:! echo "Preparing" && rspec --format documentation %<CR>
 nmap <leader>r :w<CR>:! echo "Preparing" && ruby %<CR>
 nmap <leader><leader>r :wa<CR>:! echo "Preparing" && bundle exec ruby -Itest %<CR>
-vmap <leader>gb :Gbrowse<CR>
-inoremap <leader>gb <ESC>:Gbrowse<CR>
 
 " spell check
 nmap <leader>sc :setlocal spell! spelllang=en_us<CR>
