@@ -4,6 +4,14 @@ aug AutoloadVimrc
   au BufWritePost ~/dotfiles/vim.symlink/*.vim source $MYVIMRC
 aug END
 
+set cursorline
+highlight CursorLine ctermbg=None ctermfg=None term=None cterm=None gui=None
+aug CursorInsert
+  au!
+  autocmd InsertLeave * highlight CursorLine ctermbg=None ctermfg=None term=None cterm=None gui=None
+  autocmd InsertEnter * highlight CursorLine ctermbg=darkblue ctermfg=None term=None cterm=None gui=None
+aug END
+
 set nocompatible               " be iMproved
 filetype off                   " required!
 set shell=$SHELL
