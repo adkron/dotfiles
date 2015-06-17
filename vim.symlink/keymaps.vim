@@ -172,6 +172,7 @@ nmap <leader>gg :GitGutterToggle<CR>
 
 " Fugitive
 nmap <leader>gs :Gstatus<CR>
+nmap <F3> :Git fetch<CR>:Git rebase origin/master<CR>
 nmap <leader>gr :Gread<CR>:w<CR>
 nmap <leader>gp :Git push origin HEAD<CR>
 nmap <leader>gh :Gblame<CR>
@@ -186,7 +187,7 @@ inoremap <leader>gb <ESC>:Gbrowse<CR>
 nmap <leader>rs :w<CR>:! echo "Preparing" && rspec %<CR>
 nmap <leader>rd :w<CR>:! echo "Preparing" && rspec --format documentation %<CR>
 nmap <leader>r :w<CR>:! echo "Preparing" && ruby %<CR>
-nmap <leader><leader>r :wa<CR>:! echo "Preparing" && bundle exec ruby -Itest %<CR>
+nmap <leader><leader>r :wa<CR>:! echo "Preparing" && ruby -Itest %<CR>
 
 " spell check
 nmap <leader>sc :setlocal spell! spelllang=en_us<CR>
@@ -205,3 +206,6 @@ nmap <leader>pg :!gist --private %<CR>
 
 " view output
 nmap <leader>vo <ESC>:!<CR>
+
+nmap <leader><S-s> :Sscratch<CR>GI
+inoremap <leader><S-s> <ESC>:Sscratch<CR>GI

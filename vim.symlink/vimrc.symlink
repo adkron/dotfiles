@@ -66,6 +66,9 @@ set wildmenu
 
 set virtualedit=block
 
+" Ctrlp settings
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class
+
 " Care about case only if I use an uppercase letter
 set ignorecase
 set smartcase
@@ -98,7 +101,7 @@ let g:CommandTMaxHeight=20
 
 " Enable syntastic syntax checking
 let g:syntastic_enable_signs=1
-let g:syntastic_quiet_warnings=1
+let g:syntastic_quiet_messages = {'level': 'warnings'}
 
 " Directories for swp files
 set backupdir=~/.vim/backup
@@ -131,3 +134,25 @@ source $HOME/.vim/commands.vim
 source $HOME/.vim/filetypes.vim
 " Abbreviations
 source $HOME/.vim/abbreviations.vim
+
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+let g:rbpt_colorpairs = [
+    \ ['brown',       'RoyalBlue3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['red',         'firebrick3'],
+    \ ]
