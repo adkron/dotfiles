@@ -6,15 +6,6 @@
 "
 vnoremap <BS> d
 
-" Control+A is Select All.
-"
-noremap  <C-A>  gggH<C-O>G
-inoremap <C-A>  <C-O>gg<C-O>gH<C-O>G
-cnoremap <C-A>  <C-C>gggH<C-O>G
-onoremap <C-A>  <C-C>gggH<C-O>G
-snoremap <C-A>  <C-C>gggH<C-O>G
-xnoremap <C-A>  <C-C>ggVG
-
 " Control+S saves the current file (if it's been changed).
 "
 noremap  <C-S>  :update<CR>
@@ -173,13 +164,11 @@ nmap <leader>gg :GitGutterToggle<CR>
 " Fugitive
 nmap <leader>gs :Gstatus<CR>
 nmap <F3> :Git fetch<CR>:Git rebase origin/master<CR>
+nmap <leader>gf :Git fetch<CR>
 nmap <leader>gr :Gread<CR>:w<CR>
 nmap <leader>gp :Git push origin HEAD<CR>
 nmap <leader>gh :Gblame<CR>
 nmap <leader>grh :Git reset --hard<CR>
-nmap <leader>gsd :Git svn dcommit<CR>
-nmap <leader>gsf :Git svn fetch<CR>
-nmap <leader>gsr :Git svn rebase<CR>
 vmap <leader>gb :Gbrowse<CR>
 inoremap <leader>gb <ESC>:Gbrowse<CR>
 
@@ -207,5 +196,5 @@ nmap <leader>pg :!gist --private %<CR>
 " view output
 nmap <leader>vo <ESC>:!<CR>
 
-nmap <leader><S-s> :Sscratch<CR>GI
-inoremap <leader><S-s> <ESC>:Sscratch<CR>GI
+nmap <leader><S-s> :Sscratch<CR>Go
+inoremap <leader><S-s> <ESC>:Sscratch<CR>Go
