@@ -172,12 +172,14 @@ nmap <leader>gr :Gread<CR>:w<CR>
 nmap <leader>gp :Git push origin HEAD<CR>
 nmap <leader>gh :Gblame<CR>
 nmap <leader>grh :Git reset --hard<CR>
+
 vmap <leader>gb :Gbrowse<CR>
 inoremap <leader>gb <ESC>:Gbrowse<CR>
 
 " Ruby helpers
-nmap <leader>rs :w<CR>:! echo "Preparing" && rspec %<CR>
+nmap <leader>rs :w<CR>:! echo "Preparing" && bundle exec rspec %<CR>
 nmap <leader>rd :w<CR>:! echo "Preparing" && rspec --format documentation %<CR>
+nmap <leader>rf :w<CR>:! echo "Preparing" && bundle exec rspec %:<C-r>=line('.')<CR><CR>
 nmap <leader>r :w<CR>:! echo "Preparing" && ruby %<CR>
 nmap <leader><leader>r :wa<CR>:! echo "Preparing" && ruby -Itest %<CR>
 
