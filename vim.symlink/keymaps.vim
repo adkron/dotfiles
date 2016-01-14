@@ -6,6 +6,9 @@
 "
 vnoremap <BS> d
 
+" Yank to the end of the line with Y
+noremap Y y$
+
 " Control+S saves the current file (if it's been changed).
 "
 noremap  <C-S>  :update<CR>
