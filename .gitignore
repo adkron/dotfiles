@@ -5,4 +5,5 @@ vim.symlink/indent/
 vim.symlink/nerdtree_plugin/
 vim.symlink/plugin/
 vim.symlink/syntax/
+vim.symlink/plugged/
 .netrwhist
