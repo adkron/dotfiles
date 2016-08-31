@@ -10,7 +10,7 @@ filetype plugin indent on     " required!
 Plug 'elixir-lang/vim-elixir'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-bundler'
-Plug 'mileszs/ack.vim'
+Plug 'rking/ag.vim'
 Plug 'tpope/vim-haml'
 Plug 'tpope/vim-rails'
 Plug 'pangloss/vim-javascript'
@@ -41,6 +41,8 @@ Plug 'vim-indent-object'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'scratch.vim'
+Plug 'janko-m/vim-test'
+Plug 'tpope/vim-dispatch'
 
 call plug#end()
 filetype plugin indent on     " required!

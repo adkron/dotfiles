@@ -25,6 +25,8 @@ inoremap <C-Z>  <C-O>u
 inoremap <F2>   <C-R>=strftime("%c")<CR>
 nmap     <F2>   a<F2><Esc>
 
+inoremap jj     <Esc>
+
 " F7 formats the current/highlighted paragraph.
 "
 " XXX: Consider changing this to gwap to maintain logical cursor position.
@@ -136,8 +138,8 @@ let g:blockle_mapping = '<Leader>bl'
 " Toggle open the tags list window
 nnoremap <silent> <F8> :TlistToggle<CR>
 
-" Ctrl-Shift-F for Ack
-  map <C-F> :Ack!<space>""<Left>
+" Ctrl-Shift-F for Ag
+  map <C-F> :Ag!<space>""<Left>
 
 " Alt-/ to toggle comments
   map <A-/> <plug>NERDCommenterToggle<CR>
@@ -166,7 +168,7 @@ nmap <leader>gg :GitGutterToggle<CR>
 
 " Fugitive
 nmap <leader>gs :Gstatus<CR>
-nmap <F3> :Git fetch<CR>:Git rebase origin/master<CR>
+nmap <F3> :Git fetch<CR>:Git merge --no-ff origin/master<CR>
 nmap <leader>gf :Git fetch<CR>
 nmap <leader>gr :Gread<CR>:w<CR>
 nmap <leader>gp :Git push origin HEAD<CR>
@@ -177,11 +179,11 @@ vmap <leader>gb :Gbrowse<CR>
 inoremap <leader>gb <ESC>:Gbrowse<CR>
 
 " Ruby helpers
-nmap <leader>rs :w<CR>:! echo "Preparing" && bundle exec rspec %<CR>
-nmap <leader>rd :w<CR>:! echo "Preparing" && rspec --format documentation %<CR>
-nmap <leader>rf :w<CR>:! echo "Preparing" && bundle exec rspec %:<C-r>=line('.')<CR><CR>
-nmap <leader>r :w<CR>:! echo "Preparing" && ruby %<CR>
-nmap <leader><leader>r :wa<CR>:! echo "Preparing" && ruby -Itest %<CR>
+let test#strategy = 'dispatch'
+nmap <leader>rs :w<CR>:TestFile<CR>
+nmap <leader>rf :w<CR>:TestNearest<CR>
+nmap <leader>rl :w<CR>:TestLast<CR>
+nmap <leader>rv :w<CR>:TestVisit<CR>
 
 " spell check
 nmap <leader>sc :setlocal spell! spelllang=en_us<CR>
@@ -203,3 +205,9 @@ nmap <leader>vo <ESC>:!<CR>
 
 nmap <leader><S-s> :Sscratch<CR>Go
 inoremap <leader><S-s> <ESC>:Sscratch<CR>Go
+
+" print buffer
+nmap <leader>p :hardcopy<CR>
+inoremap <leader>p :hardcopy<CR>a
+vnoremap <leader>p :hardcopy<CR>
+nmap <leader><leader><leader><leader><leader>c :! echo "comma comma comma comma comma chameleon"<CR>
