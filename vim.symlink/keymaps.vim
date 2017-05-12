@@ -9,12 +9,6 @@ vnoremap <BS> d
 " Yank to the end of the line with Y
 noremap Y y$
 
-" Control+S saves the current file (if it's been changed).
-"
-noremap  <C-S>  :update<CR>
-vnoremap <C-S>  <C-C>:update<CR>
-inoremap <C-S>  <C-O>:update<CR>
-
 " Control+Z is Undo, in Normal and Insert mode.
 "
 noremap  <C-Z>  u
@@ -147,20 +141,6 @@ nnoremap <silent> <F8> :TlistToggle<CR>
   map /  <plug>NERDCommenterToggle<CR>
   imap /  <Esc><plug>NERDCommenterToggle<CR>i
 
-" Alt-][ to increase/decrease indentation
-  vmap <A-]> >gv
-  vmap <A-[> <gv
-
-" Ctrl-Option-ArrowKey to switch viewports
-  map <C-S-Up> <C-w>k
-  imap <C-S-Up> <Esc> <C-w>k
-  map <C-S-Down> <C-w>j
-  imap <C-S-Down> <Esc> <C-w>j
-  map <C-S-Right> <C-w>l
-  imap <C-S-Right> <Esc> <C-w>l
-  map <C-S-Left> <C-w>h
-  imap <C-S-Left> <C-w>h
-
 " Git Gutter Commands
 let g:gitgutter_highlight_lines = 1
 let g:gitgutter_enabled = 0
@@ -169,6 +149,7 @@ nmap <leader>gg :GitGutterToggle<CR>
 " Fugitive
 nmap <leader>gs :Gstatus<CR>
 nmap <F3> :Git fetch<CR>:Git merge --no-ff origin/master<CR>
+nmap <F4> :Git fetch<CR>:Git rebase --no-ff origin/master<CR>
 nmap <leader>gf :Git fetch<CR>
 nmap <leader>gr :Gread<CR>:w<CR>
 nmap <leader>gp :Git push origin HEAD<CR>
@@ -211,3 +192,15 @@ nmap <leader>p :hardcopy<CR>
 inoremap <leader>p :hardcopy<CR>a
 vnoremap <leader>p :hardcopy<CR>
 nmap <leader><leader><leader><leader><leader>c :! echo "comma comma comma comma comma chameleon"<CR>
+
+" Dash
+nmap <silent> <leader>d <Plug>DashSearch
+
+" xmlformat
+nmap <leader>xf :%!xmllint --format -<CR>
+
+
+nmap <leader>- :sp<CR>
+inoremap <leader>- <ESC>:sp<CR>
+nmap <leader>\| :vsp<CR>
+inoremap <leader>\| <ESC>:vsp<CR>

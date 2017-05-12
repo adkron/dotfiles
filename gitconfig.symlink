@@ -1,5 +1,5 @@
 [git-pair]
-    authors = Amos King <amos.king@asolutions.com>
+    authors = Amos King <amos@binarynoggin.com>
 
 [color]
     ui = auto
@@ -55,6 +55,7 @@
     which-branches-contain = branch -a --contains
     which-tags-contain = name-rev --name-only
     wipe = !git reset --hard; git clean -fd
+	d = difftool
 
 [http]
     sslVerify = 0
@@ -63,8 +64,12 @@
     path = .my_gitconfig
 [user]
 	name = Amos L King
-	email = amos.l.king@gmail.com
+	email = amos@binarynoggin.com
 [core]
 	editor = /usr/bin/vim
 [push]
 	default = matching
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false

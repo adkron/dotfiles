@@ -7,6 +7,8 @@ filetype plugin indent on     " required!
  " My Plugins here:
  "
  " original repos on github
+Plug 'tacahiroy/ctrlp-funky'
+Plug 'slim-template/vim-slim'
 Plug 'elixir-lang/vim-elixir'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-bundler'
@@ -43,6 +45,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'scratch.vim'
 Plug 'janko-m/vim-test'
 Plug 'tpope/vim-dispatch'
+Plug 'rizzatti/dash.vim'
 
 call plug#end()
 filetype plugin indent on     " required!

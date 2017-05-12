@@ -18,7 +18,7 @@ set shell=$SHELL
 
 source $HOME/.vim/plugs.vim
 
-let mapleader = ','
+let mapleader = ","
 syntax enable
 
 colorscheme vividchalk
@@ -66,7 +66,7 @@ set wildmenu
 set virtualedit=block
 
 " Ctrlp settings
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class,*.beam
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=50
 
@@ -135,6 +135,13 @@ source $HOME/.vim/commands.vim
 source $HOME/.vim/filetypes.vim
 " Abbreviations
 source $HOME/.vim/abbreviations.vim
+
+" ctrlp funky - method finder
+noremap <leader>fm :CtrlPFunky<Cr>
+noremap <leader>fM :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
+let g:ctrlp_funky_ruby_requires = 1
+let g:ctrlp_funky_ruby_rake_words = 1
+
 
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound

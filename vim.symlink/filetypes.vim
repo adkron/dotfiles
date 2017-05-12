@@ -30,6 +30,6 @@ au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
 
 " add json syntax highlighting
 au BufNewFile,BufRead *.json set ft=javascript
+au BufNewFile,BufRead *.jsx set ft=javascript
 
 au BufRead,BufNewFile *.txt call s:setupWrapping()
-
