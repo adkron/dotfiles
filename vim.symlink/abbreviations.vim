@@ -10,3 +10,7 @@
 :ab mutext mutex
 :ab ture true
 :ab flase false
+:ab recieved received
+:ab recieve receive
+:ab asseert assert
+:ab alais alias

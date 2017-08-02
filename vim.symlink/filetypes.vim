@@ -19,6 +19,7 @@ au BufNewFile,BufRead *.rabl set filetype=ruby
 au BufNewFile,BufRead *.coffee set filetype=coffee
 au BufNewFile,BufRead *.litcoffee set filetype=litcoffee
 au BufNewFile,BufRead *.exs set filetype=elixir
+au BufNewFile,BufRead *.types set filetype=elixir
 au BufNewFile,BufRead *.java set filetype=java
 au BufNewFile,BufRead *.aj set filetype=java
 

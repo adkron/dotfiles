@@ -67,8 +67,16 @@ set virtualedit=block
 
 " Ctrlp settings
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class,*.beam
+" ignore elixir outputs
+set wildignore+=*/_build/*,*/doc/*,*/deps/*,*/node_modules/*,*/cover/*
+" ignore git directories
+set wildignore+=*/.git/*
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=50
+let g:ctrlp_show_hidden=1
+" ignore caching of files when less than the number this keeps the list up to
+" date when adding files in most projecs
+let g:ctrlp_use_caching = 500
 
 " Care about case only if I use an uppercase letter
 set ignorecase
@@ -164,3 +172,6 @@ let g:rbpt_colorpairs = [
     \ ['darkred',     'DarkOrchid3'],
     \ ['red',         'firebrick3'],
     \ ]
+
+" alchemist
+let g:alchemist#elixir_erlang_src = "/Users/amos/workspace/opensource/elixir"

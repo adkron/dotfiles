@@ -39,13 +39,15 @@ Plug 'ecomba/vim-ruby-refactoring'
 Plug 'Raimondi/delimitMate'
 Plug 'jgdavey/vim-blockle'
 Plug 'airblade/vim-gitgutter'
-Plug 'vim-indent-object'
+Plug 'vim-scripts/vim-indent-object'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'kien/ctrlp.vim'
-Plug 'scratch.vim'
+Plug 'vim-scripts/scratch.vim'
 Plug 'janko-m/vim-test'
 Plug 'tpope/vim-dispatch'
 Plug 'rizzatti/dash.vim'
+Plug 'slashmili/alchemist.vim'
+Plug 'vim-scripts/Conque-Shell'
 
 call plug#end()
 filetype plugin indent on     " required!
