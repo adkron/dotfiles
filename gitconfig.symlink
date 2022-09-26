@@ -67,9 +67,16 @@
 	email = amos@binarynoggin.com
 [core]
 	editor = /usr/bin/vim
+	excludesfile = /Users/amosking/.gitignore
 [push]
 	default = matching
 [diff]
 	tool = vimdiff
 [difftool]
 	prompt = false
+[commit]
+	gpgsign = true
+[gpg]
+	program = /usr/local/MacGPG2/bin/gpg2
+[init]
+	defaultBranch = master
